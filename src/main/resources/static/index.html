@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--
+      index.html
+      ──────────────────────────────────────────────────────────
+      Full-Stack Contact Form Landing Page
+      Served automatically by Spring Boot from:
+        src/main/resources/static/index.html
+
+      Sections:
+        1. Hero     – headline, sub-headline, CTA button
+        2. About    – project description & tech stack
+        3. Contact  – form (Name, Email, Message)
+        4. Footer   – copyright
+      ──────────────────────────────────────────────────────────
+    -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevConnect – Java Full Stack Internship</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap"
+          rel="stylesheet" />
+
+    <!-- Our stylesheet (served from static/) -->
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+<!-- ════════════════════════════════════════════
+     NAVIGATION BAR
+════════════════════════════════════════════ -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <!-- Brand logo / name -->
+        <a href="#home" class="nav-brand">
+            <span class="brand-icon">&#9654;</span> DevConnect
+        </a>
+
+        <!-- Hamburger button (shown on mobile) -->
+        <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+            <span></span><span></span><span></span>
+        </button>
+
+        <!-- Navigation links -->
+        <ul class="nav-menu" id="navMenu">
+            <li><a href="#home"    class="nav-link">Home</a></li>
+            <li><a href="#about"   class="nav-link">About</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </div>
+</nav>
+
+<!-- ════════════════════════════════════════════
+     SECTION 1 – HERO
+     Full-viewport banner with CTA
+════════════════════════════════════════════ -->
+<section class="hero" id="home">
+    <!-- Decorative blobs -->
+    <div class="hero-blob blob-1"></div>
+    <div class="hero-blob blob-2"></div>
+
+    <div class="hero-content">
+        <span class="hero-badge">🎓 B.Tech CSE · Internship Task 1</span>
+        <h1 class="hero-title">
+            Build. Learn. <span class="highlight">Connect.</span>
+        </h1>
+        <p class="hero-subtitle">
+            A modern Full Stack application built with
+            <strong>Spring Boot</strong> on the backend and clean
+            <strong>HTML / CSS</strong> on the frontend.
+            Send a message below — watch it appear in the Java console!
+        </p>
+        <div class="hero-cta">
+            <a href="#contact" class="btn btn-primary">Send a Message</a>
+            <a href="#about"   class="btn btn-outline">Learn More</a>
+        </div>
+
+        <!-- Tech stack pills -->
+        <div class="tech-pills">
+            <span class="pill">☕ Java 17</span>
+            <span class="pill">🌱 Spring Boot 3</span>
+            <span class="pill">🌐 REST API</span>
+            <span class="pill">📐 HTML5 / CSS3</span>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 2 – ABOUT
+     Project description + feature cards
+════════════════════════════════════════════ -->
+<section class="about" id="about">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">About This Project</span>
+            <h2 class="section-title">What Does This App Do?</h2>
+            <p class="section-subtitle">
+                A hands-on demonstration of full-stack communication:
+                a browser form talking to a Spring Boot REST endpoint.
+            </p>
+        </div>
+
+        <div class="about-grid">
+
+            <!-- Card 1 -->
+            <div class="about-card">
+                <div class="card-icon">🖥️</div>
+                <h3>Frontend</h3>
+                <p>
+                    Responsive landing page built with semantic HTML5 and
+                    modern CSS3 — flexbox, grid, custom properties, and
+                    smooth transitions.  No frameworks needed.
+                </p>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="about-card">
+                <div class="card-icon">⚙️</div>
+                <h3>Backend</h3>
+                <p>
+                    Spring Boot 3 REST controller accepts JSON POST requests,
+                    validates input, and prints structured output to the
+                    IntelliJ console using SLF4J logging.
+                </p>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="about-card">
+                <div class="card-icon">🔗</div>
+                <h3>Integration</h3>
+                <p>
+                    The browser's Fetch API sends an asynchronous JSON
+                    request.  The server responds with a success / error
+                    message that's displayed to the user instantly.
+                </p>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="about-card">
+                <div class="card-icon">📱</div>
+                <h3>Responsive Design</h3>
+                <p>
+                    The layout adapts from wide desktop screens down to
+                    360 px mobile viewports using CSS media queries and a
+                    flexible grid system.
+                </p>
+            </div>
+
+        </div>
+
+        <!-- Architecture diagram (text-based) -->
+        <div class="arch-diagram">
+            <div class="arch-step">
+                <div class="arch-icon">👤</div>
+                <div class="arch-label">User fills form</div>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-step">
+                <div class="arch-icon">🌐</div>
+                <div class="arch-label">Fetch API (JSON)</div>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-step">
+                <div class="arch-icon">🌱</div>
+                <div class="arch-label">Spring Boot Controller</div>
+            </div>
+            <div class="arch-arrow">→</div>
+            <div class="arch-step">
+                <div class="arch-icon">🖨️</div>
+                <div class="arch-label">Console Output</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     SECTION 3 – CONTACT FORM
+     POST → /api/contact
+════════════════════════════════════════════ -->
+<section class="contact" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Get In Touch</span>
+            <h2 class="section-title">Send a Message</h2>
+            <p class="section-subtitle">
+                Fill in the form — your data will be printed in the
+                Spring Boot console on the server.
+            </p>
+        </div>
+
+        <div class="contact-wrapper">
+
+            <!-- Left panel – info cards -->
+            <div class="contact-info">
+                <div class="info-card">
+                    <span class="info-icon">📍</span>
+                    <div>
+                        <strong>Location</strong>
+                        <p>Running on localhost:8080</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">🔌</span>
+                    <div>
+                        <strong>API Endpoint</strong>
+                        <p>POST /api/contact</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">📝</span>
+                    <div>
+                        <strong>Content-Type</strong>
+                        <p>application/json</p>
+                    </div>
+                </div>
+                <div class="info-card">
+                    <span class="info-icon">✅</span>
+                    <div>
+                        <strong>Health Check</strong>
+                        <p>GET /api/health</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right panel – the form -->
+            <div class="contact-form-wrapper">
+                <form id="contactForm" novalidate>
+
+                    <!-- Name field -->
+                    <div class="form-group">
+                        <label for="name" class="form-label">
+                            Full Name <span class="required">*</span>
+                        </label>
+                        <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                class="form-input"
+                                placeholder="e.g. Arjun Sharma"
+                                required
+                                autocomplete="name"
+                        />
+                        <span class="form-error" id="nameError"></span>
+                    </div>
+
+                    <!-- Email field -->
+                    <div class="form-group">
+                        <label for="email" class="form-label">
+                            Email Address <span class="required">*</span>
+                        </label>
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                class="form-input"
+                                placeholder="e.g. arjun@example.com"
+                                required
+                                autocomplete="email"
+                        />
+                        <span class="form-error" id="emailError"></span>
+                    </div>
+
+                    <!-- Message field -->
+                    <div class="form-group">
+                        <label for="message" class="form-label">
+                            Message <span class="required">*</span>
+                        </label>
+                        <textarea
+                                id="message"
+                                name="message"
+                                class="form-input form-textarea"
+                                placeholder="Write your message here..."
+                                rows="5"
+                                required
+                        ></textarea>
+                        <span class="form-error" id="messageError"></span>
+                    </div>
+
+                    <!-- Submit button -->
+                    <button type="submit" class="btn btn-primary btn-submit" id="submitBtn">
+                        <span id="btnText">Send Message ✉️</span>
+                        <span id="btnLoader" class="loader hidden"></span>
+                    </button>
+
+                </form>
+
+                <!-- Success / Error alert (shown after API response) -->
+                <div id="formAlert" class="form-alert hidden"></div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════
+     FOOTER
+════════════════════════════════════════════ -->
+<footer class="footer">
+    <div class="container">
+        <p>
+            Built with ☕ Java + 🌱 Spring Boot &nbsp;|&nbsp;
+            Java Full Stack Internship – Task 1 &nbsp;|&nbsp;
+            &copy; <span id="year"></span>
+        </p>
+    </div>
+</footer>
+
+<!-- ════════════════════════════════════════════
+     JAVASCRIPT
+     Handles: nav scroll, mobile toggle, form
+     validation, Fetch API POST to /api/contact
+════════════════════════════════════════════ -->
+<script>
+    /* ── Utility helpers ─────────────────────────────────── */
+
+    // Automatically update the footer year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ── Navbar: add shadow on scroll ───────────────────── */
+    window.addEventListener('scroll', () => {
+      const navbar = document.getElementById('navbar');
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+    });
+
+    /* ── Mobile hamburger toggle ─────────────────────────── */
+    const navToggle = document.getElementById('navToggle');
+    const navMenu   = document.getElementById('navMenu');
+
+    navToggle.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+      navToggle.classList.toggle('open');
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+        navToggle.classList.remove('open');
+      });
+    });
+
+    /* ── Form validation helpers ─────────────────────────── */
+
+    /**
+     * showError(fieldId, msg)
+     * Marks an input as invalid and shows the error message below it.
+     */
+    function showError(fieldId, msg) {
+      const input = document.getElementById(fieldId);
+      const error = document.getElementById(fieldId + 'Error');
+      input.classList.add('invalid');
+      error.textContent = msg;
+    }
+
+    /** clearError(fieldId) – removes the error state from an input */
+    function clearError(fieldId) {
+      const input = document.getElementById(fieldId);
+      const error = document.getElementById(fieldId + 'Error');
+      input.classList.remove('invalid');
+      error.textContent = '';
+    }
+
+    /** validateEmail(email) – basic RFC-style check */
+    function validateEmail(email) {
+      return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+
+    /** validateForm() – returns true if all fields are valid */
+    function validateForm(name, email, message) {
+      let valid = true;
+
+      if (!name.trim()) {
+        showError('name', 'Please enter your full name.');
+        valid = false;
+      } else {
+        clearError('name');
+      }
+
+      if (!email.trim()) {
+        showError('email', 'Please enter your email address.');
+        valid = false;
+      } else if (!validateEmail(email)) {
+        showError('email', 'Please enter a valid email address.');
+        valid = false;
+      } else {
+        clearError('email');
+      }
+
+      if (!message.trim()) {
+        showError('message', 'Please write a message.');
+        valid = false;
+      } else if (message.trim().length < 10) {
+        showError('message', 'Message must be at least 10 characters.');
+        valid = false;
+      } else {
+        clearError('message');
+      }
+
+      return valid;
+    }
+
+    /* ── Contact form submission ──────────────────────────── */
+
+    document.getElementById('contactForm').addEventListener('submit', async (e) => {
+      e.preventDefault(); // Prevent default HTML form submission
+
+      // Read form values
+      const name    = document.getElementById('name').value;
+      const email   = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+
+      // Run client-side validation first
+      if (!validateForm(name, email, message)) return;
+
+      // UI: show spinner, disable button
+      const submitBtn  = document.getElementById('submitBtn');
+      const btnText    = document.getElementById('btnText');
+      const btnLoader  = document.getElementById('btnLoader');
+      const formAlert  = document.getElementById('formAlert');
+
+      submitBtn.disabled = true;
+      btnText.classList.add('hidden');
+      btnLoader.classList.remove('hidden');
+      formAlert.classList.add('hidden');
+
+      try {
+        /*
+         * POST /api/contact
+         * Sends JSON body: { name, email, message }
+         * Spring's @RequestBody maps this to ContactRequest.java
+         */
+        const response = await fetch('/api/contact', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, message })
+        });
+
+        const data = await response.json();
+
+        if (response.ok && data.status === 'success') {
+          // Success – show green alert, reset form
+          formAlert.textContent = '✅ ' + data.message;
+          formAlert.className   = 'form-alert success';
+          document.getElementById('contactForm').reset();
+        } else {
+          // Server returned an error (e.g. 400 Bad Request)
+          formAlert.textContent = '⚠️ ' + (data.message || 'Something went wrong.');
+          formAlert.className   = 'form-alert error';
+        }
+
+      } catch (err) {
+        // Network error – server not running, etc.
+        formAlert.textContent =
+          '🔴 Could not reach the server. Is Spring Boot running on port 8080?';
+        formAlert.className = 'form-alert error';
+        console.error('Fetch error:', err);
+      } finally {
+        // Re-enable button regardless of outcome
+        submitBtn.disabled = false;
+        btnText.classList.remove('hidden');
+        btnLoader.classList.add('hidden');
+        formAlert.classList.remove('hidden');
+
+        // Scroll the alert into view
+        formAlert.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      }
+    });
+
+    /* ── Clear field errors on input ─────────────────────── */
+    ['name', 'email', 'message'].forEach(id => {
+      document.getElementById(id).addEventListener('input', () => clearError(id));
+    });
+</script>
+
+</body>
+</html>
